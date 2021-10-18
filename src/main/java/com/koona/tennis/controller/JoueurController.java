@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.koona.tennis.controller;
+
+import com.koona.tennis.core.entity.Joueur;
+import com.koona.tennis.core.service.JoueurService;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Steve KOUNA
+ */
+public class JoueurController {
+    
+    private JoueurService joueurService;
+
+    public JoueurController() {
+        this.joueurService = new JoueurService();
+    }
+    
+    
+    public void afficheDetailsJoueur() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du joueur ? ");
+        long id = scanner.nextLong();
+        Joueur joueur = joueurService.getJoueur(id);
+        System.out.println("Le joueur selectionne est : " + joueur.getPrenom() + " " + joueur.getNom());
+    }
+    
+    public void creerJoueur() {
+        Joueur joueur = new Joueur();
+        System.out.println("----- > Creation d'un nouveau joueur <-----");
+        Scanner scanNom = new Scanner(System.in);
+        Scanner scanPrenom = new Scanner(System.in);
+        Scanner scanSexe = new Scanner(System.in);
+
+        System.out.println("Entrez le nom : ");
+        String nom  = scanNom.nextLine();
+        joueur.setNom(nom);
+        System.out.println("Entrez le prenom : ");
+        String prenom  = scanPrenom.nextLine();
+        joueur.setPrenom(prenom);
+        System.out.println("Entrez le sexe : ");
+        String sex  = scanSexe.nextLine();
+        joueur.setSexe(sex.charAt(0));
+        
+        joueurService.createJoueur(joueur);
+        
+        System.out.println("Le joueur : " + joueur.getPrenom() + " " + joueur.getNom() + " a ete cree");
+    }
+}
