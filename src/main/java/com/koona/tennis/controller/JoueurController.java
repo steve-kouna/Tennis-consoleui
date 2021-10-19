@@ -46,4 +46,15 @@ public class JoueurController {
         
         System.out.println("Le joueur : " + joueur.getPrenom() + " " + joueur.getNom() + " a ete cree");
     }
+    
+    public void renameJoueur() {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanNom = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du joueur que vous voulez modifier le nom ? ");
+        long id = scanner.nextLong();
+        scanner.nextLine();
+        System.out.println("Entrez le nom : ");
+        String nom  = scanNom.nextLine();
+        joueurService.rename(id, nom);
+    }
 }
