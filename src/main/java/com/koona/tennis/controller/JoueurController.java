@@ -57,4 +57,15 @@ public class JoueurController {
         String nom  = scanNom.nextLine();
         joueurService.rename(id, nom);
     }
+    
+    public void changeSexeJoueur() {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanSexe = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du joueur que vous voulez modifier le nom ? ");
+        long id = scanner.nextLong();
+        scanner.nextLine();
+        System.out.println("Entrez le sexe : ");
+        char sexe  = scanSexe.nextLine().charAt(0);
+        joueurService.changeSexe(id, sexe);
+    }
 }

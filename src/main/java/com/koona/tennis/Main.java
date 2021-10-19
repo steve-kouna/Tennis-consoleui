@@ -15,10 +15,11 @@ import com.koona.tennis.controller.TournoiController;
  */
 public class Main {
     public static void main(String[] args) {
-        JoueurController controller = new JoueurController();
-//        controller.afficheDetailsJoueur();
-//        controller.creerJoueur();
-        controller.renameJoueur();
+        JoueurController joueurController = new JoueurController();
+//        joueurController.afficheDetailsJoueur();
+//        joueurController.creerJoueur();
+//        joueurController.renameJoueur();
+            joueurController.changeSexeJoueur();
         
 //        TournoiController tournoiCtl = new TournoiController();
 //        tournoiCtl.afficheDetailsTournoi();
