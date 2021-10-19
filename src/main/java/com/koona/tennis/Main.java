@@ -19,7 +19,8 @@ public class Main {
 //        joueurController.afficheDetailsJoueur();
 //        joueurController.creerJoueur();
 //        joueurController.renameJoueur();
-            joueurController.changeSexeJoueur();
+//            joueurController.changeSexeJoueur();
+            joueurController.deleteJoueur();
         
 //        TournoiController tournoiCtl = new TournoiController();
 //        tournoiCtl.afficheDetailsTournoi();
