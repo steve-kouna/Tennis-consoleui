@@ -42,4 +42,13 @@ public class TournoiController {
         
         System.out.println("Le tournoi : " + tournoi.getNom()+ " a pour ID -> " + tournoi.getId() + " a ete cree");
     }
+    
+    
+    public void deleteTournoi() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du tournoi que vous voulez supprimer ? ");
+        long id = scanner.nextLong();
+        tournoiService.deleteTournoi(id);
+        System.out.println("Tournoi supprime");
+    }
 }
