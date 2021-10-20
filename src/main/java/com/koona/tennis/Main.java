@@ -7,6 +7,7 @@ package com.koona.tennis;
 
 
 import com.koona.tennis.controller.JoueurController;
+import com.koona.tennis.controller.ScoreVainqueurController;
 import com.koona.tennis.controller.TournoiController;
 
 /**
@@ -22,10 +23,12 @@ public class Main {
 //            joueurController.changeSexeJoueur();
 //            joueurController.deleteJoueur();
         
-        TournoiController tournoiCtl = new TournoiController();
+//        TournoiController tournoiCtl = new TournoiController();
 //        tournoiCtl.afficheDetailsTournoi();
 //        tournoiCtl.creerTournoi();
-        tournoiCtl.deleteTournoi();
+//        tournoiCtl.deleteTournoi();
+        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
+        scoreVainqueurController.afficheDetailsScore();
     }
 }
 
