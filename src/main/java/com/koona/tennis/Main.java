@@ -8,6 +8,7 @@ package com.koona.tennis;
 
 import com.koona.tennis.controller.EpreuveController;
 import com.koona.tennis.controller.JoueurController;
+import com.koona.tennis.controller.MatchTennisController;
 import com.koona.tennis.controller.ScoreVainqueurController;
 import com.koona.tennis.controller.TournoiController;
 
@@ -30,9 +31,12 @@ public class Main {
 //        tournoiCtl.deleteTournoi();
 //        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
 //        scoreVainqueurController.afficheDetailsScore();
+//
+//        EpreuveController epreuveController = new EpreuveController();
+//        epreuveController.afficheRolandGarros();
 
-        EpreuveController epreuveController = new EpreuveController();
-        epreuveController.afficheRolandGarros();
+        MatchTennisController matchTennisController = new  MatchTennisController();
+        matchTennisController.afficheDetailsMatch();
     }
 }
 
