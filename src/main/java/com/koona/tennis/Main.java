@@ -37,6 +37,8 @@ public class Main {
 
         MatchTennisController matchTennisController = new  MatchTennisController();
         matchTennisController.afficheDetailsMatch();
+        matchTennisController.tapisVert();
+        matchTennisController.afficheDetailsMatch();
     }
 }
 

@@ -43,4 +43,12 @@ public class MatchTennisController {
                 + ", " + matchTennisDto.getScore().getSet5()
         );
     }
+    
+    public void tapisVert(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du match a modifie ? ");
+        long id = scanner.nextLong();
+        
+        matchService.tapisVert(id);
+    }
 }
