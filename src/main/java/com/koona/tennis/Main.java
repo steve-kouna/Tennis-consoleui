@@ -32,11 +32,11 @@ public class Main {
 //        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
 //        scoreVainqueurController.afficheDetailsScore();
 //
-        EpreuveController epreuveController = new EpreuveController();
-        epreuveController.afficheDerniereEpreuveFull();
+//        EpreuveController epreuveController = new EpreuveController();
+//        epreuveController.afficheDerniereEpreuveFull();
 
-//        MatchTennisController matchTennisController = new  MatchTennisController();
-//        matchTennisController.afficheDetailsMatch();
+        MatchTennisController matchTennisController = new  MatchTennisController();
+        matchTennisController.afficheDetailsMatch();
     }
 }
 

@@ -34,5 +34,13 @@ public class MatchTennisController {
                 matchTennisDto.getVainqueur().getPrenom() + " " + matchTennisDto.getVainqueur().getNom());
         System.out.println("le nom du finaliste de Roland Garros en 2015 est : " + 
                 matchTennisDto.getFinaliste().getPrenom() + " " + matchTennisDto.getFinaliste().getNom());
+        System.out.println("le score est : " + 
+                matchTennisDto.getScore().getSet1()
+                + ", " + matchTennisDto.getScore().getSet1()
+                + ", " + matchTennisDto.getScore().getSet2()
+                + ", " + matchTennisDto.getScore().getSet3()
+                + ", " + matchTennisDto.getScore().getSet4()
+                + ", " + matchTennisDto.getScore().getSet5()
+        );
     }
 }
