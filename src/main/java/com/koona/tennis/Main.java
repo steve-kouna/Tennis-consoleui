@@ -29,14 +29,14 @@ public class Main {
 //        tournoiCtl.afficheDetailsTournoi();
 //        tournoiCtl.creerTournoi();
 //        tournoiCtl.deleteTournoi();
-        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
-        scoreVainqueurController.afficheDetailsScore();
+//        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
+//        scoreVainqueurController.afficheDetailsScore();
 //
-//        EpreuveController epreuveController = new EpreuveController();
-//        epreuveController.afficheRolandGarros();
+        EpreuveController epreuveController = new EpreuveController();
+        epreuveController.afficheDerniereEpreuveFull();
 
-        MatchTennisController matchTennisController = new  MatchTennisController();
-        matchTennisController.afficheDetailsMatch();
+//        MatchTennisController matchTennisController = new  MatchTennisController();
+//        matchTennisController.afficheDetailsMatch();
     }
 }
 

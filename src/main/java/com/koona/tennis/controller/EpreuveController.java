@@ -2,6 +2,7 @@ package com.koona.tennis.controller;
 
 import com.koona.tennis.core.dto.EpreuveFullDto;
 import com.koona.tennis.core.dto.EpreuveLightDto;
+import com.koona.tennis.core.dto.JoueurDto;
 import com.koona.tennis.core.entity.Epreuve;
 import com.koona.tennis.core.entity.Tournoi;
 import com.koona.tennis.core.service.EpreuveService;
@@ -47,5 +48,20 @@ public class EpreuveController {
         
         EpreuveLightDto epreuve = epreuveService.getEpreuveSansTournoi(id);
     }
+    
+    public void afficheDerniereEpreuveFull() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant de l'epreuve ? ");
+        long id = scanner.nextLong();
+        
+        EpreuveFullDto epreuve = epreuveService.getEpreuveAvecTournoiFull(id);
+        System.out.println("Le nom du tournoi : " + epreuve.getTournoi().getNom());
+        
+        System.out.println("les participants : ");
+        for (JoueurDto joueurDto : epreuve.getParticipants()) {
+            System.out.println(joueurDto.getPrenom() + " " + joueurDto.getNom());
+        }
+    }
+
     
 }
