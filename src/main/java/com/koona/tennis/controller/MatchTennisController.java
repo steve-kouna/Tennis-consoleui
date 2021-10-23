@@ -28,6 +28,8 @@ public class MatchTennisController {
         long id = scanner.nextLong();
         
         MatchTennisDto matchTennisDto = matchService.getMatch(id);
+        System.out.println("c'est le match de l'annee : " + matchTennisDto.getEpreuve().getAnnee() + " au tournoi de :" +
+                matchTennisDto.getEpreuve().getTournoi().getNom());
         System.out.println("le nom du vainqueur de Roland Garros en 2015 est : " + 
                 matchTennisDto.getVainqueur().getPrenom() + " " + matchTennisDto.getVainqueur().getNom());
         System.out.println("le nom du finaliste de Roland Garros en 2015 est : " + 

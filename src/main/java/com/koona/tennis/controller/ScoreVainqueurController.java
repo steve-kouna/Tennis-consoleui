@@ -5,6 +5,7 @@
  */
 package com.koona.tennis.controller;
 
+import com.koona.tennis.core.dto.ScoreVainqueurFullDto;
 import com.koona.tennis.core.entity.ScoreVainqueur;
 import com.koona.tennis.core.service.ScoreVainqueurService;
 import java.util.Scanner;
@@ -27,7 +28,7 @@ public class ScoreVainqueurController {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Quel est l'identifiant du match ? ");
         long id = scanner.nextLong();
-        ScoreVainqueur scoreVainqueur = scoreVainqueurService.getScore(id);
+        ScoreVainqueurFullDto scoreVainqueur = scoreVainqueurService.getScore(id);
         System.out.println("Le score selectionne est : " +
                 scoreVainqueur.getSet1() + ", " + 
                 scoreVainqueur.getSet2() + ", " + 
@@ -35,5 +36,9 @@ public class ScoreVainqueurController {
                 scoreVainqueur.getSet4() + ", " + 
                 scoreVainqueur.getSet5()
         );
+        System.out.println("le tournoi etait : " + scoreVainqueur.getMatch().getEpreuve().getTournoi().getNom() + 
+                " en " + scoreVainqueur.getMatch().getEpreuve().getAnnee());
+        System.out.println("dans la cetgory : " + scoreVainqueur.getMatch().getEpreuve().getTypeEpreuve());
+        
     }
 }
