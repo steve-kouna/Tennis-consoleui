@@ -36,9 +36,10 @@ public class Main {
 //        epreuveController.afficheDerniereEpreuveFull();
 
         MatchTennisController matchTennisController = new  MatchTennisController();
-        matchTennisController.afficheDetailsMatch();
-        matchTennisController.tapisVert();
-        matchTennisController.afficheDetailsMatch();
+//        matchTennisController.afficheDetailsMatch();
+//        matchTennisController.tapisVert();
+//        matchTennisController.afficheDetailsMatch();
+        matchTennisController.delete();
     }
 }
 
