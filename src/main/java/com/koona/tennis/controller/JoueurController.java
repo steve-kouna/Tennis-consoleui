@@ -3,6 +3,7 @@ package com.koona.tennis.controller;
 import com.koona.tennis.core.dto.JoueurDto;
 import com.koona.tennis.core.entity.Joueur;
 import com.koona.tennis.core.service.JoueurService;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -79,8 +80,12 @@ public class JoueurController {
     }
     
     public void afficheListJoueur() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Entrez le sexe : ");
+        String sexe  = scanner.nextLine();
         System.out.println("Liste des joueurs :");
-        for (JoueurDto joueurDto: joueurService.getAll()){
+        List<JoueurDto> joueurDtos =  joueurService.getAll(sexe.charAt(0));
+        for (JoueurDto joueurDto: joueurDtos){
             System.out.println(joueurDto.getPrenom() + " " + joueurDto.getNom());
         }
     }
