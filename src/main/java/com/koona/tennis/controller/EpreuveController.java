@@ -7,6 +7,7 @@ import com.koona.tennis.core.entity.Epreuve;
 import com.koona.tennis.core.entity.Tournoi;
 import com.koona.tennis.core.service.EpreuveService;
 import com.koona.tennis.core.service.TournoiService;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -63,5 +64,21 @@ public class EpreuveController {
         }
     }
 
+    
+    public void afficheListEpreuve() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Entrez le code : ");
+        String code  = scanner.nextLine();
+        System.out.println("Liste des epreuves :");
+        List<EpreuveFullDto> epreuves =  epreuveService.getAll(code);
+        
+        for (EpreuveFullDto epreuveFullDto: epreuves){
+            System.out.println("Type d'epreuve : " + 
+                    epreuveFullDto.getTypeEpreuve() + " -> " +
+                    epreuveFullDto.getTournoi().getNom() + " annee " + 
+                    epreuveFullDto.getAnnee()
+            );
+        }
+    }
     
 }
