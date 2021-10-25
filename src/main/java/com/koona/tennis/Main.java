@@ -24,7 +24,7 @@ public class Main {
 //        joueurController.renameJoueur();
 //            joueurController.changeSexeJoueur();
 //            joueurController.deleteJoueur();
-//        joueurController.afficheListJoueur();
+        joueurController.afficheListJoueur();
         
 //        TournoiController tournoiCtl = new TournoiController();
 //        tournoiCtl.afficheDetailsTournoi();
@@ -33,8 +33,8 @@ public class Main {
 //        ScoreVainqueurController scoreVainqueurController = new ScoreVainqueurController();
 //        scoreVainqueurController.afficheDetailsScore();
 //
-        EpreuveController epreuveController = new EpreuveController();
-        epreuveController.afficheListEpreuve();
+//        EpreuveController epreuveController = new EpreuveController();
+//        epreuveController.afficheListEpreuve();
 
 //        MatchTennisController matchTennisController = new  MatchTennisController();
 //        matchTennisController.afficheDetailsMatch();
