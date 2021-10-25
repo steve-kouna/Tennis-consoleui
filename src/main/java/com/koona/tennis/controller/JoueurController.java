@@ -1,5 +1,6 @@
 package com.koona.tennis.controller;
 
+import com.koona.tennis.core.dto.JoueurDto;
 import com.koona.tennis.core.entity.Joueur;
 import com.koona.tennis.core.service.JoueurService;
 import java.util.Scanner;
@@ -76,4 +77,12 @@ public class JoueurController {
         joueurService.deleteJoueur(id);
         System.out.println("joueur supprime");
     }
+    
+    public void afficheListJoueur() {
+        System.out.println("Liste des joueurs :");
+        for (JoueurDto joueurDto: joueurService.getAll()){
+            System.out.println(joueurDto.getPrenom() + " " + joueurDto.getNom());
+        }
+    }
+
 }

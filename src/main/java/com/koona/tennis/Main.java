@@ -18,12 +18,13 @@ import com.koona.tennis.controller.TournoiController;
  */
 public class Main {
     public static void main(String[] args) {
-//        JoueurController joueurController = new JoueurController();
+        JoueurController joueurController = new JoueurController();
 //        joueurController.afficheDetailsJoueur();
 //        joueurController.creerJoueur();
 //        joueurController.renameJoueur();
 //            joueurController.changeSexeJoueur();
 //            joueurController.deleteJoueur();
+        joueurController.afficheListJoueur();
         
 //        TournoiController tournoiCtl = new TournoiController();
 //        tournoiCtl.afficheDetailsTournoi();
@@ -35,11 +36,11 @@ public class Main {
 //        EpreuveController epreuveController = new EpreuveController();
 //        epreuveController.afficheDerniereEpreuveFull();
 
-        MatchTennisController matchTennisController = new  MatchTennisController();
+//        MatchTennisController matchTennisController = new  MatchTennisController();
 //        matchTennisController.afficheDetailsMatch();
 //        matchTennisController.tapisVert();
 //        matchTennisController.afficheDetailsMatch();
-        matchTennisController.delete();
+//        matchTennisController.delete();
     }
 }
 
