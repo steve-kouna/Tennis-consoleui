@@ -50,6 +50,5 @@ public class TournoiController {
         System.out.println("Quel est l'identifiant du tournoi que vous voulez supprimer ? ");
         long id = scanner.nextLong();
         tournoiService.deleteTournoi(id);
-        System.out.println("Tournoi supprime");
     }
 }
